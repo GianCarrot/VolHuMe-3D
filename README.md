@@ -1,5 +1,5 @@
 # 🧍‍♂️ 3D Human Skeleton Reconstruction from Multi‑View Cameras  
-### Computer Vision — A.Y. 2024/2025  
+### Computer Vision — A.Y. 2025/2026  
 ### University of Trento
 
 ---
