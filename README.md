@@ -8,37 +8,73 @@
 
 This project implements a **3D human skeleton reconstruction pipeline** using the **VolHuMe** multi‑camera RGB dataset.
 
-The main objectives are:
-- Annotate 2D human keypoints from multiple camera views.
-    Requirements:
-        a) Annotate human keypoint for each camera.
-        b) Use Roboflow.
-            b.1) register to **Roboflow** (one account per group)
-            b.2) send to the tutor one email per group to be added to Roboflow
-        c) Annotate at least one complete action
-- Triangulate visible joints to obtain a 3D skeleton.
-    Requirements:
-        a) Annotate 2D multiview.
-        b) Triangulate visible joints to obtain a 3D skeleton.
-        c) Visualize 3D pose.
-- Reconstruct missing or occluded joints (How can we reconstruct missing or occluded joints by combining information from multiple views and enforcing skeleton consistency?).
-    Requirements:
-        a) Implement own method.
-- Evaluate reconstruction accuracy via reprojection error.
-    Requirements:
-        a) Apply skelethon reprojection 3D onto 2D images. 
-        b) Compute loss function such as MPJPE (mean per joint position error) and mean square error.
-- Occlusions Effect
-    Requirements:
-        a) Analyze Error Changing when a joint is:
-            a.1) visible in a few cameras.
-            a.2) totally occluded
-            a.3) when we use cameras subset.
-- (Bonus) Visualize the 3D skeleton in Unreal Engine.
-    Requirements:
-        a) 3D importing.
-        b) Skelethon visualization.
-        c) Contact tutor for technical details.
+---
+
+## 🎯 Objectives and Requirements
+
+### 1) 2D Keypoint Annotation
+**Goal:** Annotate human keypoints for each camera view.
+
+**Requirements:**
+- Annotate 2D human keypoints for every camera.
+- Use **Roboflow**:
+  - Register one account per group.
+  - Email the tutor to be added to the workspace.
+- Annotate **at least one complete action**.
+
+---
+
+### 2) 3D Skeleton Triangulation
+**Goal:** Triangulate visible joints to obtain a 3D skeleton.
+
+**Requirements:**
+- Use multiview 2D annotations.
+- Apply triangulation to reconstruct 3D joint positions.
+- Visualize the 3D pose.
+
+---
+
+### 2a) Missing / Occluded Joint Reconstruction
+**Goal:** Recover joints not visible in some cameras.
+
+**Requirements:**
+- Implement your own reconstruction method.
+- Combine information from multiple views.
+- Enforce skeleton consistency constraints.
+
+---
+
+### 3) Reconstruction Accuracy Evaluation
+**Goal:** Measure how accurate the 3D reconstruction is.
+
+**Requirements:**
+- Reproject the 3D skeleton back into each camera view.
+- Compute:
+  - **MPJPE** (Mean Per Joint Position Error)
+  - **MSE** (Mean Square Error)
+- Evaluate error **only on visible joints**.
+
+---
+
+### 3a) Occlusion Effect Analysis
+**Goal:** Study how partial visibility affects reconstruction accuracy.
+
+**Requirements:**
+- Analyze error when a joint is:
+  - Visible in few cameras.
+  - Totally occluded.
+  - Estimated using subsets of cameras.
+
+---
+
+### 4) (Bonus) Unreal Engine Visualization
+**Goal:** Display the reconstructed 3D skeleton in Unreal Engine.
+
+**Requirements:**
+- Import 3D skeleton data.
+- Visualize the skeleton.
+- Contact the tutor for technical details.
+
 ---
 
 ## 👥 Team
